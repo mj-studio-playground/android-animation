@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/master_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+            android:id="@+id/scene_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <include
+                layout="@layout/scene_1"
+        />
+
+    </FrameLayout>
+
+    <Button
+            android:id="@+id/button_scene_1"
+            android:translationX="-100dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="scene 1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <Button
+            android:id="@+id/button_scene_2"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="scene 2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <Button
+            android:id="@+id/button_scene_3"
+            android:translationX="100dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="scene 3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+</FrameLayout>
+

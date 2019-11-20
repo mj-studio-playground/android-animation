@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@+id/mainFragment">
+
+    <fragment
+        android:id="@+id/animatorFragment"
+        android:name="happy.mjstudio.animationsample.AnimatorFragment"
+        android:label="fragment_animator"
+        tools:layout="@layout/fragment_animator">
+        <argument
+            android:name="duration"
+            android:defaultValue="300L"
+            app:argType="long" />
+        <argument
+            android:name="time"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="happy.mjstudio.animationsample.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/asd"
+            app:destination="@id/animatorFragment"
+            app:enterAnim="@anim/item_animation_fall_down"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_mainFragment_to_animatedVectorDrawableFragment"
+            app:destination="@id/animatedVectorDrawableFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_animateLayoutChangesFragment"
+            app:destination="@id/animateLayoutChangesFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_mainFragment_to_layoutAnimationFragment"
+            app:destination="@id/layoutAnimationFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_mainFragment_to_circleRevealFragment"
+            app:destination="@id/circleRevealFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_mainFragment_to_sceneFragment"
+            app:destination="@id/sceneFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_mainFragment_to_constraintSetFragment"
+            app:destination="@id/constraintSetFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/animatedVectorDrawableFragment"
+        android:name="happy.mjstudio.animationsample.AnimatedVectorDrawableFragment"
+        android:label="fragment_animated_vector_drawable"
+        tools:layout="@layout/fragment_animated_vector_drawable" />
+    <fragment
+        android:id="@+id/animateLayoutChangesFragment"
+        android:name="happy.mjstudio.animationsample.AnimateLayoutChangesFragment"
+        android:label="fragment_animate_layout_changes"
+        tools:layout="@layout/fragment_animate_layout_changes" />
+    <fragment
+        android:id="@+id/circleRevealFragment"
+        android:name="happy.mjstudio.animationsample.CircleRevealFragment"
+        android:label="fragment_circle_reveal"
+        tools:layout="@layout/fragment_circle_reveal" />
+    <fragment
+        android:id="@+id/layoutAnimationFragment"
+        android:name="happy.mjstudio.animationsample.LayoutAnimationFragment"
+        android:label="fragment_layout_animation"
+        tools:layout="@layout/fragment_layout_animation" />
+    <fragment
+        android:id="@+id/sceneFragment"
+        android:name="happy.mjstudio.animationsample.SceneFragment"
+        android:label="SceneFragment"
+        tools:layout="@layout/fragment_scene" />
+    <fragment
+        android:id="@+id/constraintSetFragment"
+        android:name="happy.mjstudio.animationsample.ConstraintSetFragment"
+        android:label="ConstraintSetFragment"
+        tools:layout="@layout/fragment_constraint_set" />
+
+
+</navigation>
