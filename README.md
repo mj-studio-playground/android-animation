@@ -13,12 +13,12 @@ Simple animations in Android sample project
 
 ### 6. Transition Animation (Scene)
 
-#### ----------PENDING----------
-
 ### 7. Transition Animation (Without Scene)
 
 ### 8. Lottie
 
 ### 9. MotionLayout
+
+#### ----------PENDING----------
 
 ### 10. XML Basic View Animation
