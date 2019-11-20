@@ -1,5 +1,7 @@
 # AnimationSample
-Simple animations in Android sample project
+
+<img src="1.gif" width = 400/>
+
 
 ### 1. Animators => ValueAnimator, ObjectAnimator, ViewPropertyAnimator, AnimatorSet
 
