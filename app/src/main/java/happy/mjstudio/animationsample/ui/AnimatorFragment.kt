@@ -1,4 +1,4 @@
-package happy.mjstudio.animationsample
+package happy.mjstudio.animationsample.ui
 
 import android.animation.*
 import android.os.Bundle
@@ -9,6 +9,7 @@ import android.view.ViewTreeObserver
 import android.view.animation.LinearInterpolator
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import happy.mjstudio.animationsample.R
 import kotlinx.android.synthetic.main.fragment_animator.*
 
 class AnimatorFragment : Fragment() {
@@ -18,7 +19,8 @@ class AnimatorFragment : Fragment() {
     }
 
     private val args: AnimatorFragmentArgs by navArgs()
-    private var duration: Long = DEFAULT_DURATION
+    private var duration: Long =
+        DEFAULT_DURATION
 
     override fun onCreateView(
         inflater: LayoutInflater,

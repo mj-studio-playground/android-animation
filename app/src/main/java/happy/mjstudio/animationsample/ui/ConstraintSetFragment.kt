@@ -1,4 +1,4 @@
-package happy.mjstudio.animationsample
+package happy.mjstudio.animationsample.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.fragment.app.Fragment
 import androidx.transition.TransitionManager
+import happy.mjstudio.animationsample.R
 import kotlinx.android.synthetic.main.fragment_constraint_set.*
 
 class ConstraintSetFragment : Fragment() {
