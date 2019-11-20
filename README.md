@@ -1,6 +1,6 @@
 # AnimationSample
 
-<img src="1.gif" width = 400/>
+<img src="1.gif" width = 300/>
 
 
 ### 1. Animators => ValueAnimator, ObjectAnimator, ViewPropertyAnimator, AnimatorSet
