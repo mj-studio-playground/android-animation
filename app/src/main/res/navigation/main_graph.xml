@@ -74,6 +74,13 @@
             app:popExitAnim="@anim/nav_default_pop_exit_anim"
             android:id="@+id/action_mainFragment_to_constraintSetFragment"
             app:destination="@id/constraintSetFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_mainFragment_to_lottieFragment"
+            app:destination="@id/lottieFragment" />
     </fragment>
 
 
@@ -107,6 +114,11 @@
         android:name="happy.mjstudio.animationsample.ui.ConstraintSetFragment"
         android:label="ConstraintSetFragment"
         tools:layout="@layout/fragment_constraint_set" />
+    <fragment
+        tools:layout="@layout/fragment_lottie"
+        android:id="@+id/lottieFragment"
+        android:name="happy.mjstudio.animationsample.ui.LottieFragment"
+        android:label="LottieFragment" />
 
 
 </navigation>

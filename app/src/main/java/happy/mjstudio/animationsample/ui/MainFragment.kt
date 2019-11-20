@@ -43,5 +43,8 @@ class MainFragment : Fragment() {
         button_constraint_set.setOnClickListener {
             findNavController().navigate(R.id.action_mainFragment_to_constraintSetFragment)
         }
+        button_lottie.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_lottieFragment)
+        }
     }
 }

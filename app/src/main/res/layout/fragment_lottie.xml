@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="daynight.json"
+        app:lottie_loop="true"
+        app:lottie_repeatMode="reverse"
+        />
+
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/lottieCopyright"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:textColor="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Copyright"
+        />
+</FrameLayout>
