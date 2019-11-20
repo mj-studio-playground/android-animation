@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<happy.mjstudio.animationsample.widget.CollapsibleToolbar android:id="@+id/motionLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="48dp"
+    app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed"
+    app:layoutDescription="@xml/motion_scene_main"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <ImageView
+        android:id="@+id/toolbarImage"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fantasy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <TextView
+        android:transformPivotX="0dp"
+        android:transformPivotY="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:id="@+id/title"
+        android:textSize="24sp"
+        android:textColor="@color/colorWhite"
+        android:text="ANIMATION"
+        />
+
+</happy.mjstudio.animationsample.widget.CollapsibleToolbar>

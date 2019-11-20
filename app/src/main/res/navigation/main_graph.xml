@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/animatorFragment"
-        android:name="happy.mjstudio.animationsample.AnimatorFragment"
+        android:name="happy.mjstudio.animationsample.ui.AnimatorFragment"
         android:label="fragment_animator"
         tools:layout="@layout/fragment_animator">
         <argument
@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="happy.mjstudio.animationsample.MainFragment"
+        android:name="happy.mjstudio.animationsample.ui.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main">
 
@@ -79,32 +79,32 @@
 
     <fragment
         android:id="@+id/animatedVectorDrawableFragment"
-        android:name="happy.mjstudio.animationsample.AnimatedVectorDrawableFragment"
+        android:name="happy.mjstudio.animationsample.ui.AnimatedVectorDrawableFragment"
         android:label="fragment_animated_vector_drawable"
         tools:layout="@layout/fragment_animated_vector_drawable" />
     <fragment
         android:id="@+id/animateLayoutChangesFragment"
-        android:name="happy.mjstudio.animationsample.AnimateLayoutChangesFragment"
+        android:name="happy.mjstudio.animationsample.ui.AnimateLayoutChangesFragment"
         android:label="fragment_animate_layout_changes"
         tools:layout="@layout/fragment_animate_layout_changes" />
     <fragment
         android:id="@+id/circleRevealFragment"
-        android:name="happy.mjstudio.animationsample.CircleRevealFragment"
+        android:name="happy.mjstudio.animationsample.ui.CircleRevealFragment"
         android:label="fragment_circle_reveal"
         tools:layout="@layout/fragment_circle_reveal" />
     <fragment
         android:id="@+id/layoutAnimationFragment"
-        android:name="happy.mjstudio.animationsample.LayoutAnimationFragment"
+        android:name="happy.mjstudio.animationsample.ui.LayoutAnimationFragment"
         android:label="fragment_layout_animation"
         tools:layout="@layout/fragment_layout_animation" />
     <fragment
         android:id="@+id/sceneFragment"
-        android:name="happy.mjstudio.animationsample.SceneFragment"
+        android:name="happy.mjstudio.animationsample.ui.SceneFragment"
         android:label="SceneFragment"
         tools:layout="@layout/fragment_scene" />
     <fragment
         android:id="@+id/constraintSetFragment"
-        android:name="happy.mjstudio.animationsample.ConstraintSetFragment"
+        android:name="happy.mjstudio.animationsample.ui.ConstraintSetFragment"
         android:label="ConstraintSetFragment"
         tools:layout="@layout/fragment_constraint_set" />
 

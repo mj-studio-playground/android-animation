@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context=".AnimatorFragment">
+        tools:context=".ui.AnimatorFragment">
 
         <TextView
             android:id="@+id/textView"

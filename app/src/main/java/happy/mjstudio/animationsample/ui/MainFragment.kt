@@ -1,4 +1,4 @@
-package happy.mjstudio.animationsample
+package happy.mjstudio.animationsample.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import happy.mjstudio.animationsample.R
 import kotlinx.android.synthetic.main.layout_main_content.*
 
 class MainFragment : Fragment() {
@@ -17,7 +18,11 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         button_animator.setOnClickListener {
-            val directions = MainFragmentDirections.asd(duration = 1000L, time = 500)
+            val directions =
+                MainFragmentDirections.asd(
+                    duration = 1000L,
+                    time = 500
+                )
             findNavController().navigate(directions)
         }
         button_animatedvector.setOnClickListener {

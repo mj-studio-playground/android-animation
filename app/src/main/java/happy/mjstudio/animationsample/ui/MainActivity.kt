@@ -1,7 +1,8 @@
-package happy.mjstudio.animationsample
+package happy.mjstudio.animationsample.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import happy.mjstudio.animationsample.R
 
 class MainActivity : AppCompatActivity() {
 

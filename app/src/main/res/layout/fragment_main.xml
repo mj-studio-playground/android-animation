@@ -8,7 +8,10 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp">
+        android:layout_height="200dp">
+
+        <include layout="@layout/layout_collapsible_toolbar"/>
+
 
     </com.google.android.material.appbar.AppBarLayout>
 

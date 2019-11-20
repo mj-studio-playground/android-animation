@@ -1,4 +1,4 @@
-package happy.mjstudio.animationsample
+package happy.mjstudio.animationsample.ui
 
 import android.os.Build
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewAnimationUtils
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import happy.mjstudio.animationsample.R
 import kotlinx.android.synthetic.main.fragment_circle_reveal.*
 
 class CircleRevealFragment : Fragment() {

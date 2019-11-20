@@ -1,4 +1,4 @@
-package happy.mjstudio.animationsample
+package happy.mjstudio.animationsample.ui
 
 import android.animation.LayoutTransition
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import happy.mjstudio.animationsample.R
 import kotlinx.android.synthetic.main.fragment_animate_layout_changes.*
 
 class AnimateLayoutChangesFragment : Fragment() {
