@@ -22,22 +22,42 @@ class SceneFragment : Fragment() {
             addTransition(ChangeBounds())
             addTransition(ChangeClipBounds())
             addTransition(ChangeImageTransform())
+            addTransition(ChangeTransform())
         }
 
         button_scene_1.setOnClickListener {
+            showStatusBar()
             val scene = Scene.getSceneForLayout(root, R.layout.scene_1, context!!)
 
             TransitionManager.go(scene, transition)
         }
         button_scene_2.setOnClickListener {
+            showStatusBar()
             val scene = Scene.getSceneForLayout(root, R.layout.scene_2, context!!)
 
             TransitionManager.go(scene, transition)
         }
         button_scene_3.setOnClickListener {
+            hideStatusBar()
             val scene = Scene.getSceneForLayout(root, R.layout.scene_3, context!!)
 
             TransitionManager.go(scene, transition)
         }
+    }
+
+    private fun showStatusBar() {
+        activity?.window?.decorView?.let {
+            it.systemUiVisibility = it.systemUiVisibility and View.SYSTEM_UI_FLAG_FULLSCREEN.inv()
+        }
+    }
+    private fun hideStatusBar() {
+        activity?.window?.decorView?.let {
+            it.systemUiVisibility = it.systemUiVisibility or View.SYSTEM_UI_FLAG_FULLSCREEN
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        showStatusBar()
     }
 }

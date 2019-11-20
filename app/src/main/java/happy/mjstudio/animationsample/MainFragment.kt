@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.fragment_main.*
+import kotlinx.android.synthetic.main.layout_main_content.*
 
 class MainFragment : Fragment() {
 

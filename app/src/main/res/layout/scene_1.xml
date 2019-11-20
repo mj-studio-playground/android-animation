@@ -9,7 +9,7 @@
     <ImageView
             android:layout_width="213dp"
             android:layout_height="287dp"
-            app:srcCompat="@drawable/ios"
+            app:srcCompat="@drawable/avd"
             android:id="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/button_animator"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animator"
+            android:textAllCaps="false" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/button_animatedvector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AnimatedVectorDrawable"
+            android:textAllCaps="false" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/button_layoutanimation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LayoutAnimation"
+            android:textAllCaps="false" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/button_animatelayoutchanges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AnimateLayoutChanges"
+            android:textAllCaps="false" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/button_circlereveal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CircleReveal"
+            android:textAllCaps="false" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/button_scene"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scene Transition"
+            android:textAllCaps="false" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/button_constraint_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ConstraintSet Transition"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
