@@ -1,26 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
-             tools:context=".ui.LayoutAnimationFragment">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ui.LayoutAnimationFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-
-            android:layoutAnimation="@anim/layout_animation_fall_down"
-    />
+        tools:listitem="@layout/item_layoutanimation"
+        tools:itemCount="5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layoutAnimation="@anim/layout_animation_fall_down"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
     <Button
-            android:id="@+id/button_start"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="Start"
-            android:layout_gravity="bottom|center_horizontal"
-            android:layout_marginBottom="60dp"
-    />
+        android:textAllCaps="false"
+        android:id="@+id/button_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="Start Linear RecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
 
-</FrameLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/flowContainer"
+        android:layoutAnimation="@anim/layout_animation_fall_down"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintTop_toBottomOf="@+id/button_start"
+        tools:layout_editor_absoluteX="0dp" >
+
+        
+        <View
+            android:background="#f72"
+            android:id="@+id/view1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            tools:ignore="MissingConstraints" />
+        <View
+            android:background="#a22"
+            android:id="@+id/view2"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            tools:ignore="MissingConstraints" />
+        <View
+            android:background="#a2f"
+            android:id="@+id/view3"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            tools:ignore="MissingConstraints" />
+        <View
+            android:background="#020"
+            android:id="@+id/view4"
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:background="#525"
+            android:id="@+id/view5"
+            android:layout_width="44dp"
+            android:layout_height="100dp"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            app:flow_wrapMode="chain"
+            android:orientation="horizontal"
+            app:flow_horizontalStyle="spread"
+
+            app:flow_horizontalGap="16dp"
+            app:constraint_referenced_ids="view1,view2,view3,view4,view5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button_start_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="Start ViewGroup LayoutAnimation"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flowContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

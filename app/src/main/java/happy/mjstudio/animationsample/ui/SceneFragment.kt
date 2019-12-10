@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.transition.*
 import happy.mjstudio.animationsample.R
+import happy.mjstudio.animationsample.widget.onDebounceClick
 import kotlinx.android.synthetic.main.fragment_scene.*
 
 class SceneFragment : Fragment() {
@@ -26,21 +27,21 @@ class SceneFragment : Fragment() {
             addTransition(ChangeTransform())
         }
 
-        button_scene_1.setOnClickListener {
+        button_scene_1 onDebounceClick {
             showStatusBar()
             val scene = Scene.getSceneForLayout(root,
                 R.layout.scene_1, context!!)
 
             TransitionManager.go(scene, transition)
         }
-        button_scene_2.setOnClickListener {
+        button_scene_2 onDebounceClick {
             showStatusBar()
             val scene = Scene.getSceneForLayout(root,
                 R.layout.scene_2, context!!)
 
             TransitionManager.go(scene, transition)
         }
-        button_scene_3.setOnClickListener {
+        button_scene_3 onDebounceClick {
             hideStatusBar()
             val scene = Scene.getSceneForLayout(root,
                 R.layout.scene_3, context!!)

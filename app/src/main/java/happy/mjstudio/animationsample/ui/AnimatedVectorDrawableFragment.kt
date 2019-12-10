@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import happy.mjstudio.animationsample.R
+import happy.mjstudio.animationsample.widget.onDebounceClick
 import kotlinx.android.synthetic.main.fragment_animated_vector_drawable.*
 
 class AnimatedVectorDrawableFragment : Fragment() {
@@ -17,7 +18,7 @@ class AnimatedVectorDrawableFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        button_start.setOnClickListener {
+        button_start onDebounceClick {
             val avd = AnimatedVectorDrawableCompat.create(context!!,
                 R.drawable.avd
             )

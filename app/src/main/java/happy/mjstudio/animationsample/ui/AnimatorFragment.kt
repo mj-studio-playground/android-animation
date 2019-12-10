@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import android.view.animation.LinearInterpolator
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.navArgs
 import happy.mjstudio.animationsample.R
 import kotlinx.android.synthetic.main.fragment_animator.*
 
@@ -17,10 +16,6 @@ class AnimatorFragment : Fragment() {
     companion object {
         const val DEFAULT_DURATION = 300L
     }
-
-    private val args: AnimatorFragmentArgs by navArgs()
-    private var duration: Long =
-        DEFAULT_DURATION
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,7 +26,6 @@ class AnimatorFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        this.duration = args.duration
         //region ValueAnimator
         ValueAnimator.ofFloat(0f, 500f).apply {
             addUpdateListener { animation ->
@@ -46,7 +40,7 @@ class AnimatorFragment : Fragment() {
             interpolator = LinearInterpolator()
             repeatCount = ValueAnimator.INFINITE
             repeatMode = ValueAnimator.REVERSE
-            duration = this@AnimatorFragment.duration
+            duration = DEFAULT_DURATION
             start()
         }
         //endregion
@@ -57,7 +51,7 @@ class AnimatorFragment : Fragment() {
             interpolator = LinearInterpolator() // AccelerateDecelerateInterpolator 가 원래 Default임
             repeatCount = ValueAnimator.INFINITE
             repeatMode = ValueAnimator.REVERSE
-            duration = this@AnimatorFragment.duration
+            duration = DEFAULT_DURATION
             start()
         }
         //endregion

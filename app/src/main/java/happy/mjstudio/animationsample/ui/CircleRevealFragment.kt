@@ -8,6 +8,7 @@ import android.view.ViewAnimationUtils
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import happy.mjstudio.animationsample.R
+import happy.mjstudio.animationsample.widget.onDebounceClick
 import kotlinx.android.synthetic.main.fragment_circle_reveal.*
 
 class CircleRevealFragment : Fragment() {
@@ -17,7 +18,7 @@ class CircleRevealFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        button_start.setOnClickListener {
+        button_start onDebounceClick {
             if (Build.VERSION.SDK_INT >= 21) {
 
                 ViewAnimationUtils.createCircularReveal(

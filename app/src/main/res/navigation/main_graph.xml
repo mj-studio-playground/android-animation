@@ -9,15 +9,7 @@
         android:id="@+id/animatorFragment"
         android:name="happy.mjstudio.animationsample.ui.AnimatorFragment"
         android:label="fragment_animator"
-        tools:layout="@layout/fragment_animator">
-        <argument
-            android:name="duration"
-            android:defaultValue="300L"
-            app:argType="long" />
-        <argument
-            android:name="time"
-            app:argType="integer" />
-    </fragment>
+        tools:layout="@layout/fragment_animator"/>
 
     <fragment
         android:id="@+id/mainFragment"
@@ -26,7 +18,7 @@
         tools:layout="@layout/fragment_main">
 
         <action
-            android:id="@+id/asd"
+            android:id="@+id/action_mainFragment_to_animatorFragment"
             app:destination="@id/animatorFragment"
             app:enterAnim="@anim/item_animation_fall_down"
             app:exitAnim="@anim/nav_default_exit_anim"
@@ -81,6 +73,13 @@
             app:popExitAnim="@anim/nav_default_pop_exit_anim"
             android:id="@+id/action_mainFragment_to_lottieFragment"
             app:destination="@id/lottieFragment" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_mainFragment_to_XMLAnimFragment"
+            app:destination="@id/XMLAnimFragment" />
     </fragment>
 
 
@@ -91,9 +90,9 @@
         tools:layout="@layout/fragment_animated_vector_drawable" />
     <fragment
         android:id="@+id/animateLayoutChangesFragment"
-        android:name="happy.mjstudio.animationsample.ui.AnimateLayoutChangesFragment"
+        android:name="happy.mjstudio.animationsample.ui.LayoutTransitionFragment"
         android:label="fragment_animate_layout_changes"
-        tools:layout="@layout/fragment_animate_layout_changes" />
+        tools:layout="@layout/fragment_layout_transition" />
     <fragment
         android:id="@+id/circleRevealFragment"
         android:name="happy.mjstudio.animationsample.ui.CircleRevealFragment"
@@ -119,6 +118,11 @@
         android:id="@+id/lottieFragment"
         android:name="happy.mjstudio.animationsample.ui.LottieFragment"
         android:label="LottieFragment" />
+    <fragment
+        tools:layout="@layout/fragment_xml_anim"
+        android:id="@+id/XMLAnimFragment"
+        android:name="happy.mjstudio.animationsample.ui.XMLAnimFragment"
+        android:label="XMLAnimFragment" />
 
 
 </navigation>

@@ -12,6 +12,7 @@
         app:lottie_fileName="daynight.json"
         app:lottie_loop="true"
         app:lottie_repeatMode="reverse"
+        app:lo
         />
 
     <TextView

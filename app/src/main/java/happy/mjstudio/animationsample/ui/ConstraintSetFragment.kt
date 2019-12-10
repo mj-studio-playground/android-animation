@@ -8,6 +8,7 @@ import androidx.constraintlayout.widget.ConstraintSet
 import androidx.fragment.app.Fragment
 import androidx.transition.TransitionManager
 import happy.mjstudio.animationsample.R
+import happy.mjstudio.animationsample.widget.onDebounceClick
 import kotlinx.android.synthetic.main.fragment_constraint_set.*
 
 class ConstraintSetFragment : Fragment() {
@@ -37,12 +38,12 @@ class ConstraintSetFragment : Fragment() {
             this.setDimensionRatio(R.id.ios,"1:1")
         }
 
-        set1.setOnClickListener {
+        set1 onDebounceClick {
             TransitionManager.beginDelayedTransition(container)
             constraintSet1.applyTo(container)
         }
 
-        set2.setOnClickListener {
+        set2 onDebounceClick {
             TransitionManager.beginDelayedTransition(container)
             constraintSet2.applyTo(container)
         }

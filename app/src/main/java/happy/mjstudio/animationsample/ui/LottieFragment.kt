@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import happy.mjstudio.animationsample.R
+import happy.mjstudio.animationsample.widget.onDebounceClick
 import kotlinx.android.synthetic.main.fragment_lottie.*
 
 /**
@@ -19,7 +20,7 @@ class LottieFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        lottieCopyright.setOnClickListener {
+        lottieCopyright onDebounceClick {
             startActivity(
                 Intent(Intent.ACTION_VIEW).apply { data = Uri.parse("https://lottiefiles.com/11555-night-vs-day-slider?lang=en#") }
             )
