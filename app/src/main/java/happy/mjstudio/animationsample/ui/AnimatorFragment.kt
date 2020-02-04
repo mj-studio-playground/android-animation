@@ -1,17 +1,20 @@
 package happy.mjstudio.animationsample.ui
 
 import android.animation.*
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewTreeObserver
 import android.view.animation.LinearInterpolator
+import androidx.core.view.doOnLayout
 import androidx.fragment.app.Fragment
 import happy.mjstudio.animationsample.R
 import kotlinx.android.synthetic.main.fragment_animator.*
 
 class AnimatorFragment : Fragment() {
+
+    private var valueAnimator: ValueAnimator? = null
 
     companion object {
         const val DEFAULT_DURATION = 300L
@@ -26,21 +29,22 @@ class AnimatorFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        imageView.elevation = 24f
+        imageView.setBackgroundColor(Color.WHITE)
+
         //region ValueAnimator
-        ValueAnimator.ofFloat(0f, 500f).apply {
+        valueAnimator = ValueAnimator.ofFloat(0f, 360f).apply {
             addUpdateListener { animation ->
                 val value = animation?.animatedValue as? Float ?: throw NullPointerException()
-
-                /* NullPointerException 발생 가능, 위험한 방법 */
-                try {
-                    imageView.x = value
-                } catch (ex: Exception) {
-                }
+                imageView.x = value * 2
+                imageView.rotationX = value
+                imageView.rotationY = value
             }
             interpolator = LinearInterpolator()
             repeatCount = ValueAnimator.INFINITE
             repeatMode = ValueAnimator.REVERSE
-            duration = DEFAULT_DURATION
+            duration = DEFAULT_DURATION * 4
             start()
         }
         //endregion
@@ -57,37 +61,31 @@ class AnimatorFragment : Fragment() {
         //endregion
 
         //region ViewPropertyAnimator
-
         /**
          * 초기 위치가 설정안돼있을 때 y를 움직이면 (0, 0)부터 시작해서 GlobalLayoutListener를 설정
          *
          * 뒤에 By 가 붙으면 현재 값으로부터 움직임 (current value = offset)
          */
-        imageView3.viewTreeObserver.addOnGlobalLayoutListener(object :
-            ViewTreeObserver.OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                imageView3.viewTreeObserver.removeOnGlobalLayoutListener(this)
+        imageView3.doOnLayout {
+            imageView3.animate().x(500f).apply {
+                duration = 3000L
 
-                imageView3.animate().x(500f).apply {
-                    duration = 3000L
+                this.setListener(object : AnimatorListenerAdapter() {
+                    override fun onAnimationEnd(animation: Animator?) {
 
-                    this.setListener(object : AnimatorListenerAdapter() {
-                        override fun onAnimationEnd(animation: Animator?) {
+                        this@apply.setListener(null) // 리스너를 해제해줘야 함
 
-                            this@apply.setListener(null) // 리스너를 해제해줘야 함
-
-                            if (imageView3 != null)
-                                imageView3.animate().xBy(-500f).apply {
-                                    duration = 1500L
-                                    start()
-                                }
-                        }
-                    })
-
-                    start()
-                }
+                        if (imageView3 != null)
+                            imageView3.animate().xBy(-500f).apply {
+                                duration = 1500L
+                                start()
+                            }
+                    }
+                })
+                start()
             }
-        })
+        }
+
 
         //endregion
 
@@ -107,5 +105,10 @@ class AnimatorFragment : Fragment() {
         }
 
         //endregion
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        valueAnimator?.cancel()
     }
 }

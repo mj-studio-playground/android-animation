@@ -11,7 +11,7 @@ android {
     buildToolsVersion = '29.0.2'
     defaultConfig {
         applicationId "happy.mjstudio.animationsample"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -46,6 +46,8 @@ dependencies {
 
     implementation 'com.google.android.material:material:1.2.0-alpha02'
     implementation 'com.airbnb.android:lottie:3.2.2'
+
+    implementation 'com.bytedance.ies.ugc.aweme:open-sdk:0.0.1.3'
 }
 
 dependencies {
