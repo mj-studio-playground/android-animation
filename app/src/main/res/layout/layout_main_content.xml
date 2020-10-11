@@ -99,5 +99,19 @@
             android:text="Lottie"
             android:textAllCaps="false" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_material"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="Material Motions"
+            android:textAllCaps="false" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

@@ -36,20 +36,5 @@ class LayoutTransitionFragment : Fragment() {
         imageViewAppear onDebounceClick {
             Toast.makeText(requireContext(),"hi",Toast.LENGTH_SHORT).show()
         }
-
-
-
-//        (this.view as ViewGroup).layoutTransition.apply {
-//
-//            val appearingAnimator = ObjectAnimator.ofFloat(view,"translationX",-1000f,0f)
-//            val disappearingAnimator = ObjectAnimator.ofFloat(view,"translationX",0f,1000f)
-//
-//
-//            this.setAnimator(LayoutTransition.APPEARING,appearingAnimator)
-//            this.setAnimator(LayoutTransition.DISAPPEARING,disappearingAnimator)
-//            this.setStartDelay(LayoutTransition.APPEARING,2000L)
-//            this.setDuration(LayoutTransition.APPEARING,1000L)
-//
-//        }
     }
 }

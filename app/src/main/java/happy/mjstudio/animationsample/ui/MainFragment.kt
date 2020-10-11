@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.theme.overlay.MaterialThemeOverlay
+import com.google.android.material.transition.MaterialSharedAxis
 import happy.mjstudio.animationsample.R
 import happy.mjstudio.animationsample.widget.onDebounceClick
 import kotlinx.android.synthetic.main.layout_main_content.*
@@ -56,6 +58,10 @@ class MainFragment : Fragment() {
 
         button_lottie onDebounceClick {
             findNavController().navigate(R.id.action_mainFragment_to_lottieFragment)
+        }
+
+        button_material onDebounceClick {
+            findNavController().navigate(R.id.action_mainFragment_to_materialMotionFragment)
         }
     }
 }

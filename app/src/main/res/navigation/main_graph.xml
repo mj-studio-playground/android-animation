@@ -80,6 +80,13 @@
             app:popExitAnim="@anim/nav_default_pop_exit_anim"
             android:id="@+id/action_mainFragment_to_XMLAnimFragment"
             app:destination="@id/XMLAnimFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_materialMotionFragment"
+            app:destination="@id/materialMotionFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
 
 
@@ -123,6 +130,23 @@
         android:id="@+id/XMLAnimFragment"
         android:name="happy.mjstudio.animationsample.ui.XMLAnimFragment"
         android:label="XMLAnimFragment" />
+    <fragment
+        android:id="@+id/materialMotionFragment"
+        android:name="happy.mjstudio.animationsample.ui.MaterialMotionFragment"
+        android:label="MaterialMotionFragment"
+        tools:layout="@layout/fragment_material_motions" >
+        <action
+            android:id="@+id/action_materialMotionFragment_to_materialContainerTransformFragment"
+            app:destination="@id/materialContainerTransformFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/materialContainerTransformFragment"
+        android:name="happy.mjstudio.animationsample.ui.MaterialContainerTransformFragment"
+        android:label="MaterialContainerTransformFragment" >
+        <argument
+            android:name="item_text"
+            app:argType="string" />
+    </fragment>
 
 
 </navigation>

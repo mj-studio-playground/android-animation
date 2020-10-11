@@ -17,4 +17,8 @@
         <item name="android:textColor">#a000</item>
     </style>
 
+    <style name="CircleImageViewStyle" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerSize">50dp</item>
+    </style>
+
 </resources>
