@@ -5,7 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.transition.*
+import androidx.transition.ChangeBounds
+import androidx.transition.ChangeClipBounds
+import androidx.transition.ChangeImageTransform
+import androidx.transition.ChangeTransform
+import androidx.transition.Fade
+import androidx.transition.Scene
+import androidx.transition.TransitionManager
+import androidx.transition.TransitionSet
 import happy.mjstudio.animationsample.R
 import happy.mjstudio.animationsample.widget.onDebounceClick
 import kotlinx.android.synthetic.main.fragment_scene.*
@@ -29,22 +36,25 @@ class SceneFragment : Fragment() {
 
         button_scene_1 onDebounceClick {
             showStatusBar()
-            val scene = Scene.getSceneForLayout(root,
-                R.layout.scene_1, context!!)
+            val scene = Scene.getSceneForLayout(
+                root, R.layout.scene_1, requireContext()
+            )
 
             TransitionManager.go(scene, transition)
         }
         button_scene_2 onDebounceClick {
             showStatusBar()
-            val scene = Scene.getSceneForLayout(root,
-                R.layout.scene_2, context!!)
+            val scene = Scene.getSceneForLayout(
+                root, R.layout.scene_2, requireContext()
+            )
 
             TransitionManager.go(scene, transition)
         }
         button_scene_3 onDebounceClick {
             hideStatusBar()
-            val scene = Scene.getSceneForLayout(root,
-                R.layout.scene_3, context!!)
+            val scene = Scene.getSceneForLayout(
+                root, R.layout.scene_3, requireContext()
+            )
 
             TransitionManager.go(scene, transition)
         }
