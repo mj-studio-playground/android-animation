@@ -31,7 +31,6 @@ class MaterialMotionFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        Log.e("TAG", this.toString())
         configureRecyclerView()
         postponeEnterTransition()
         view.doOnPreDraw {
