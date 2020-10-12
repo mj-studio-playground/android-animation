@@ -134,17 +134,43 @@
         android:id="@+id/materialMotionFragment"
         android:name="happy.mjstudio.animationsample.ui.MaterialMotionFragment"
         android:label="MaterialMotionFragment"
-        tools:layout="@layout/fragment_material_motions" >
+        tools:layout="@layout/fragment_material_motions">
         <action
             android:id="@+id/action_materialMotionFragment_to_materialContainerTransformFragment"
             app:destination="@id/materialContainerTransformFragment" />
+        <action
+            android:id="@+id/action_materialMotionFragment_to_materialElevationScaleFragment"
+            app:destination="@id/materialElevationScaleFragment" />
+        <action
+            android:id="@+id/action_materialMotionFragment_to_materialFadeThroughFragment"
+            app:destination="@id/materialFadeThroughFragment" />
+        <action
+            android:id="@+id/action_materialMotionFragment_to_materialSharedAxisFragment"
+            app:destination="@id/materialSharedAxisFragment" />
     </fragment>
+
     <fragment
+        android:id="@+id/materialElevationScaleFragment"
+        android:name="happy.mjstudio.animationsample.ui.MaterialElevationScaleFragment"
+        android:label="MaterialElevationScaleFragment"
+        tools:layout="@layout/fragment_material_elevation_scale" />
+    <fragment
+        android:id="@+id/materialSharedAxisFragment"
+        android:name="happy.mjstudio.animationsample.ui.MaterialSharedAxisFragment"
+        android:label="MaterialSharedAxisFragment"
+        tools:layout="@layout/fragment_material_shared_axis" />
+    <fragment
+        android:id="@+id/materialFadeThroughFragment"
+        android:name="happy.mjstudio.animationsample.ui.MaterialFadeThroughFragment"
+        android:label="MaterialFadeThroughFragment"
+        tools:layout="@layout/fragment_material_fade_through" />
+    <fragment
+        android:label="MaterialContainerTransformFragment"
         android:id="@+id/materialContainerTransformFragment"
         android:name="happy.mjstudio.animationsample.ui.MaterialContainerTransformFragment"
-        android:label="MaterialContainerTransformFragment" >
+        tools:layout="@layout/fragment_material_container_transform">
         <argument
-            android:name="item_text"
+            android:name="itemText"
             app:argType="string" />
     </fragment>
 

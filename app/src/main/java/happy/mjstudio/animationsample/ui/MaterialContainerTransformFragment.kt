@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import com.google.android.material.transition.MaterialArcMotion
 import com.google.android.material.transition.MaterialContainerTransform
 import happy.mjstudio.animationsample.R
 import kotlinx.android.synthetic.main.fragment_material_container_transform.*
@@ -25,9 +26,10 @@ class MaterialContainerTransformFragment : Fragment() {
     private fun setTransition() {
         cat.transitionName = args.itemText
         sharedElementEnterTransition = MaterialContainerTransform().apply {
-            duration = 300L
+            duration = 3000L
             setAllContainerColors(Color.TRANSPARENT)
             scrimColor = Color.WHITE
+            setPathMotion(MaterialArcMotion())
         }
     }
 }
